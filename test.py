@@ -22,7 +22,7 @@ wait = WebDriverWait(driver, 600)
 target = '"Ayisha"'
 
 # Replace the below string with your own message
-string = "Baby I love u very much baby "
+string = "Baby I love u very much baby more"
 
 x_arg = '//span[contains(@title,' + target + ')]'
 # print(x_arg)
