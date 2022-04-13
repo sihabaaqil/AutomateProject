@@ -6,6 +6,6 @@ client=Client(account_sid,auth_token)
 from_whatapp_number = 'whatapp:+1 415 523 8886'
 to_whatapp_number ='whatapp:+919944380786'
 client.messages.create(
-    body="Hi",
+    body="Hi,",
     from_=from_whatapp_number,
     to=to_whatapp_number)
