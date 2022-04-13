@@ -22,7 +22,7 @@ wait = WebDriverWait(driver, 600)
 target = '"Ayisha"'
 
 # Replace the below string with your own message
-string = "Baby"
+string = "I Love you Baby"
 
 x_arg = '//span[contains(@title,' + target + ')]'
 # print(x_arg)
@@ -37,3 +37,4 @@ input_box = wait.until(EC.presence_of_element_located((
 for i in range(1000):
 	input_box.send_keys(string + Keys.ENTER)
 	time.sleep(1)
+print("Message Sent")
