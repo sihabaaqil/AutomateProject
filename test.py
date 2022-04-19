@@ -12,9 +12,9 @@ from emoji import emojize
 import demoji
 
 ROOT_DIR = os.path.abspath(os.curdir)
-ser= Service(ROOT_DIR+'\chromedriver.exe')
-gd = (ROOT_DIR+'\chromedriver.exe')
-# print(ROOT_DIR+'\chromedriver.exe')
+ser= Service(ROOT_DIR+'\Driver\chromedriver.exe')
+gd = (ROOT_DIR+'\Driver\chromedriver.exe')
+# print(ROOT_DIR+'\Driver\chromedriver.exe')
 driver = webdriver.Chrome(service= ser)
 driver.get("https://web.whatsapp.com/")
 wait = WebDriverWait(driver, 600)
