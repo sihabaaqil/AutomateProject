@@ -10,12 +10,12 @@
 import pyautogui as spam
 import time
 
-Limit = input("Hi")
-msg = input("+919944380786")
+Limit = input("Enter limit :")
+msg = input("Enter message :")
 i = 0
 time.sleep(2)
 while i < int(Limit):
     spam.typewrite(msg)
     spam.press('Enter')
-i+=1
+    i+=1
 print("Message Sent")

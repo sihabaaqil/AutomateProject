@@ -6,10 +6,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 import time
 import os
-import warnings
-import emoji
-from emoji import emojize
-import demoji
+# import warnings
+# import emoji
+# from emoji import emojize
+# import demoji
 
 ROOT_DIR = os.path.abspath(os.curdir)
 ser= Service(ROOT_DIR+'\Driver\chromedriver.exe')
@@ -34,7 +34,7 @@ inp_xpath = '//div[@class="_13NKt copyable-text selectable-text"][@data-tab="10"
 input_box = wait.until(EC.presence_of_element_located((
 	By.XPATH, inp_xpath)))
 # print("ele pre" + inp_xpath)
-for i in range(50):
+for i in range(10):
 	input_box.send_keys(string + Keys.ENTER)
 	time.sleep(1)
 print("Message Sent")
