@@ -34,7 +34,7 @@ inp_xpath = '//div[@class="_13NKt copyable-text selectable-text"][@data-tab="10"
 input_box = wait.until(EC.presence_of_element_located((
 	By.XPATH, inp_xpath)))
 # print("ele pre" + inp_xpath)
-for i in range(1000):
+for i in range(50):
 	input_box.send_keys(string + Keys.ENTER)
 	time.sleep(1)
 print("Message Sent")
