@@ -22,7 +22,7 @@ wait = WebDriverWait(driver, 600)
 target = '"Ayisha"'
 
 # Replace the below string with your own message
-string =  "Baby I love u very much baby " + ":-*" # "I Love you Baby" # :-)* or :-* or :-^ or ^>^
+string =  "I love u very much baby " + ":-*" # "I Love you Baby" # :-)* or :-* or :-^ or ^>^
 
 x_arg = '//span[contains(@title,' + target + ')]'
 # print(x_arg)
@@ -34,7 +34,7 @@ inp_xpath = '//div[@class="_13NKt copyable-text selectable-text"][@data-tab="10"
 input_box = wait.until(EC.presence_of_element_located((
 	By.XPATH, inp_xpath)))
 # print("ele pre" + inp_xpath)
-for i in range(1000):
+for i in range(100):
 	input_box.send_keys(string + Keys.ENTER)
 	time.sleep(0.4)
 print("Message Sent")
@@ -45,21 +45,22 @@ input_box = wait.until(EC.presence_of_element_located((
 	By.XPATH, colu_click)))
 input_box.click()
 
-log_out = '//div[contains(@aria-label,"Log out")]'
+log_out = '//div[text()="Log out"]'
+#log_out =  '//div[contains(@aria-label,"Log out")]'
 input_box2 = wait.until(EC.presence_of_element_located((
 	By.XPATH, log_out)))
 input_box2.click()
 print("Logged out WA")
-
 time.sleep(1)
-log_out2 = '//div[text()="Log out"]'
+
 # log_l = driver.find_element(By.XPATH, log_out2) # driver.find_elements_by_xpath("//div[text()='Log out']")
 # text_length = log_l.is_displayed()
-if (driver.find_element(By.XPATH, log_out2).is_displayed() == True):
+if (driver.find_element(By.XPATH, log_out).is_displayed() == True):
    # m= log_l.text
-   input_logof = wait.until(EC.presence_of_element_located((By.XPATH, log_out2)))
+   input_logof = wait.until(EC.presence_of_element_located((By.XPATH, log_out)))
    input_logof.click()
    print("Log out from WA")
    driver.quit()
 else:
+	driver.quit()
 	print("Not found")
