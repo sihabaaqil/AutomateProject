@@ -22,7 +22,7 @@ wait = WebDriverWait(driver, 600)
 target = '"Ayisha"'
 
 # Replace the below string with your own message
-string =  "I love u very much baby " + ":-*" # "I Love you Baby" # :-)* or :-* or :-^ or ^>^
+string =  "I love u very much baby" + ":-*" # "I Love you Baby" # :-)* or :-* or :-^ or ^>^
 
 x_arg = '//span[contains(@title,' + target + ')]'
 # print(x_arg)
@@ -34,7 +34,7 @@ inp_xpath = '//div[@class="_13NKt copyable-text selectable-text"][@data-tab="10"
 input_box = wait.until(EC.presence_of_element_located((
 	By.XPATH, inp_xpath)))
 # print("ele pre" + inp_xpath)
-for i in range(100):
+for i in range(10):
 	input_box.send_keys(string + Keys.ENTER)
 	time.sleep(0.4)
 print("Message Sent")
@@ -55,6 +55,7 @@ time.sleep(1)
 
 # log_l = driver.find_element(By.XPATH, log_out2) # driver.find_elements_by_xpath("//div[text()='Log out']")
 # text_length = log_l.is_displayed()
+wait.until(EC.visibility_of_element_located((By.XPATH,log_out)));
 if (driver.find_element(By.XPATH, log_out).is_displayed() == True):
    # m= log_l.text
    input_logof = wait.until(EC.presence_of_element_located((By.XPATH, log_out)))
