@@ -47,3 +47,11 @@ print("4."+os.path.join(path, "User/Public/", "Documents", ""))
 # so a directory separator ('/')
 # will be put at the end
 # along with the concatenated value
+
+
+# Path
+path = "\home"
+
+# Join various path components
+ROOT_DIR = os.path.abspath(os.curdir)
+print("5."+ROOT_DIR +os.path.join(path, "User\Desktop", "file.txt"))
