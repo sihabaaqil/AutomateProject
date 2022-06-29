@@ -8,7 +8,7 @@ print(num1.__sizeof__())    #48     #104
 print(len(num1))            #1       #8
 # Using for loop
 for i in num1:
-    # print(i)
+    # print(i)//test
     flag = False
     # prime numbers are greater than 1
     if i > 1:
